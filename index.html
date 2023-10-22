@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+        *{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    font-weight: bold;
+    list-style: none;
+}
+body{
+    
+   background-color: gray;
+}
+.pic img{
+    float: right;
+    border: 2px solid;
+    width: 200px;  
+   border-color: aqua;
+   border-radius: 200px;
+    
+}
+.nav{
+    width: 100%;
+    height: 110px;
+    background-color:pink;
+}
+span{
+    color: brown;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    line-height: 50px;
+}
+.nav ul{
+    float: right;
+    margin-right: 20px;
+}
+.nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 50px;
+}
+.nav ul li a{
+    color:brown;
+    padding: 15px 10px;
+}
+.nav ul li a:hover{
+    color:brown;
+    border-bottom: 3px solid hotpink;
+}
+nav ul button{
+    background-color:pink;
+    border: none;
+    font-size: medium; 
+}
+@media(max-width:768px){
+
+    .nav ul{
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(192, 192, 192, 0.596);
+        text-align: center;
+        padding: 0;
+        top: 50px;
+        left: -900px;
+        transition: 2.6s;
+
+    }
+    .nav ul.slide{
+        left: 0;
+        transition: 2s;
+       
+    }
+    .nav ul li{
+        display: block;
+        width: 100%;
+        margin: 0;
+
+    }
+    .nav ul li a{
+        border: none;
+        color: black;
+    }
+    .nav ul li:hover{
+        background-color: snow;  
+    }
+    .nav ul li a:hover{
+        border: none;
+    }
+    
+    .hamburger{
+    
+        float: right;
+        padding-top: 12px;
+    }
+    .hamburger .line{
+        width: 15px;
+        height: 5px;
+        background-color:brown;
+        margin-bottom: 5px;
+        display: block;
+    }
+}
+header{
+    
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px 20px ;
+    padding: 10px 10px;
+}
+.ab{
+    
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px 20px ;
+    padding: 10px 10px;
+    
+}
+footer{
+    background-color: black;
+    color: yellowgreen;
+   text-align: center;
+    padding: 10px 10px;
+
+}
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <span>MANO</span>
+       
+        <ul>
+          <button onclick="myfun()"> <li><a href="#home">home</a></li></button> 
+           <button onclick="alert(' hello\n i am mano final year student.i am passionating on learning newthings')"> <li><a href="#about">about</a></li></button>
+            <button onclick="alert('goto my educational information')"><li><a href="#education">education</a></li></button>
+            <button onclick="alert('GOTO MY SKILLS SECTION')"><li><a href="#skills">skill</a></li></button>
+            <button onclick="alert('contact me my mail is given below..')"><li><a href="#contact">contact</a></li></button>
+        </ul>
+        <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            
+        </div>
+    </nav>
+    <pre>
+
+
+    </pre>
+            <div class="pic">  <img src="profile-pic (1).png" alt=""></div>
+            <header>
+                 <h1 id="home">I am MANO</h1>
+                 <br>
+                
+                 <p >cs student</p>
+             </header>
+             <pre>
+
+
+     
+             </pre>
+             <section id="about"> 
+                <div class="ab">
+                <h1> ABOUT</h1>
+                <br>
+                <button type="button"onclick='document.getElementById("man").innerHTML= " I am a computer science final year student .I am passionating on learning new things.I am complete frontend basics from IBM skillbuild."'>click me</button>
+                <p id="man">
+                    IT'S MY INFO.
+                </p>
+                
+            </div>
+            <pre>
+
+
+     
+            </pre>
+             </section>
+             <section id="education">
+                <div class="ab">
+                    <h1>education</h1>
+                   
+                    <ul >
+                        <li>sslc-------   90%</li>
+                        <li>hsc---------- 92%</li>
+                        <li>bsc(cs) -------83%</li>
+                    </ul>
+                </div>
+                <pre>
+
+
+     
+                </pre>
+             </section>
+             <section id="skills">
+                <div class="ab">
+                    <h1>skills</h1>
+                    <ul>
+                        <li>* linux</li>
+                        <li>* sql</li>
+                        <li>* rdbms</li>
+                        <li>* html</li>
+                        <li>* css</li>
+                        <li>* js</li>
+                    </ul>
+                </div>
+
+             </section>
+             <pre>
+
+
+
+             </pre>
+             <section id="contact">
+                <div class="ab">
+                    <h1>contact 
+                    </h1>
+                    <pre>
+                        my mail id <a href="mailto:manoj3407x@gmail.com">manoj3407x@gmail.com</a>
+                        mobile no: 8610515211
+                        address  : 336,ss nagar,
+                                          tiruppur 641606
+                    </pre>
+                </div>
+             </section>
+             <footer>
+                @copyrights manowebdevop 
+             </footer>
+    <script >
+        const hamburger=document.querySelector('.hamburger');
+        const navbar=document.querySelector('ul');
+        hamburger.addEventListener('click',()=>{
+        navbar.classList.toggle('slide');
+        });
+        function myfun(){
+            alert("I AM MANO COMPUTER SCIENCE STUDENT");
+          
+        }
+        
+    </script>
+</body>
+</html>
